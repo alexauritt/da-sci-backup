@@ -23,7 +23,7 @@ def reducer(key, list_of_values):
     # key: word
     # value: list of document identifiers    
     total = []
-    for v in list_of_values:
+    for v in set(list_of_values):
       total.append(v)
     mr.emit((key, total))
 
